@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/taskListFragment">
+
+    <fragment
+        android:id="@+id/taskListFragment"
+        android:name="com.example.todoapp.ui.screens.TaskListFragment"
+        tools:layout="@layout/fragment_tasklist" >
+        <action
+            android:id="@+id/action_taskListFragment_to_taskAddFragment"
+            app:destination="@id/taskAddFragment" />
+        <action
+            android:id="@+id/action_taskListFragment_to_taskUpdateFragment"
+            app:destination="@id/taskUpdateFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/taskAddFragment"
+        android:name="com.example.todoapp.ui.screens.TaskAddFragment"
+        tools:layout="@layout/fragment_taskadd">
+        <action
+            android:id="@+id/action_taskAddFragment_to_taskListFragment"
+            app:destination="@id/taskListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/taskUpdateFragment"
+        android:name="com.example.todoapp.ui.screens.TaskUpdateFragment"
+        tools:layout="@layout/fragment_taskupdate" >
+        <action
+            android:id="@+id/action_taskUpdateFragment_to_taskListFragment"
+            app:destination="@id/taskListFragment" />
+        <argument
+            android:name="taskId"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+
+</navigation>

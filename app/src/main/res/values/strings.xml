@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">todo</string>
+
+    <string name="desc_add_btn">Add new task</string>
+
+    <string name="text_add_btn">Add</string>
+    <string name="text_cancel_btn">Cancel</string>
+    <string name="text_save_btn">Save</string>
+    <string name="text_delete_btn">Delete</string>
+
+    <string name="text_title_view">Title</string>
+    <string name="text_title_edittext">add a title …</string>
+
+    <string name="text_desc_view">Description</string>
+    <string name="text_desc_edittext">add a description …</string>
+</resources>
